@@ -129,3 +129,9 @@ function output($a)
         echo "заданое значение не является полиндром";
     }
 }
+
+//function task8($str){
+//    $pattern ='/[0-9]/';
+//    $arr=preg_grep ($pattern,explode (":",$str);
+//    return $arr;
+//}

@@ -11,12 +11,35 @@ echo $rez.'</br>';
 //echo task2($number,"-");
 //echo '</br>';
 
-echo 'TASK3'.'</br>';
+echo '</br>'.'TASK3'.'</br>';
 echo  task3('+',10,8,3).'</br>';
 
-echo 'TASK4'.'</br>';
+echo '</br>'.'TASK4'.'</br>';
 echo  task4(5,7).'</br>';
 
 echo 'TASK5'.'</br>';
-$b=task5('Фsa');
-echo output($b);
+$b=task5('asa');
+echo output($b).'</br>'.'</br>';
+
+echo 'TASK6'.'</br>';
+echo date("m.d.Y G:i");
+echo '</br>'.time();
+
+echo '</br>'.'</br>'.'TASK7'.'</br>';
+$str="Карл у Клары украл Кораллы";
+echo preg_replace('![A-Z|А-Я]!u','', $str).'</br>';
+$str2="Две бутылки лимонада";
+$arr2=explode (' ',$str2);
+for ( $i=0; $i<count ($arr2);$i++){
+    if ($arr2[$i]=="Две"){
+        $arr2[$i]="Три";
+    }
+}
+$srt3=implode (' ',$arr2);
+echo $srt3;
+
+
+//echo '</br>'.'</br>'.'TASK8'.'</br>';
+//$str4="RX packets:950381 errors:0 dropped:0 overruns:0 frame:0.";
+//echo '<pre>';
+//echo print_r (task8($str4));
