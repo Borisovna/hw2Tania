@@ -43,3 +43,14 @@ echo $srt3;
 //$str4="RX packets:950381 errors:0 dropped:0 overruns:0 frame:0.";
 //echo '<pre>';
 //echo print_r (task8($str4));
+
+
+echo '</br>'.'</br>'.'TASK9'.'</br>';
+
+$file="test.txt";
+fopen ($file,"w");
+$current = "Hello, world";
+file_put_contents($file, $current);
+echo file_get_contents($file);
+
+echo '</br>'.'</br>'.'TASK10'.'</br>';
