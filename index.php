@@ -54,3 +54,6 @@ file_put_contents($file, $current);
 echo file_get_contents($file);
 
 echo '</br>'.'</br>'.'TASK10'.'</br>';
+$file="anothertest.txt";
+fopen ($file,"w");
+$current = "Hello again!";
