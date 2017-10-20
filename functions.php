@@ -21,11 +21,6 @@ function task2($nums,$math){
         }
     };
     
-//    if($math!=='-' or $math!=='+' or $math!=='*' or $math!=='/'){
-//        return "ERROR:не верный второй аргумент, допустимые значения: +,-,*,/ ";
-//    };
-//    с этим куском не работает, почему не пойму!
-    
     $rez = $nums[0];
     
     for ($i=1; $i<count ($nums);$i++){
@@ -35,6 +30,7 @@ function task2($nums,$math){
             case '-': $rez =$rez-$nums[$i]; break;
             case '*': $rez =$rez*$nums[$i]; break;
             case '/': $rez =$rez/$nums[$i]; break;
+            default: return"ERROR:Некорректный ввод арифметического знака<br/>";
         }
     }
     return $rez;

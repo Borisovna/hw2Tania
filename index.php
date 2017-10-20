@@ -6,10 +6,10 @@ echo 'TASK1'.'</br>';;
 $rez=task1($a,$a);
 echo $rez.'</br>';
 
-echo 'TASK2'.'</br>';
+echo '</br>'.'TASK2'.'</br>';
 $number=array(5,2);
-$r='-';
-echo task2($number,$r);
+$r='*';
+echo "Результат TASK2:".task2($number,$r);
 echo '</br>';
 
 echo '</br>'.'TASK3'.'</br>';
