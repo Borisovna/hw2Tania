@@ -13,6 +13,32 @@ function task1($var1, $var2 = null)
 }
 
 ;
+function task2($nums,$math){
+    
+    for($i=0; $i<count ($nums);$i++){
+        if(!is_integer ($nums[$i])){
+            return 'ERROR:массив чисел должен содержать только числовые значения!';
+        }
+    };
+    
+//    if($math!=='-' or $math!=='+' or $math!=='*' or $math!=='/'){
+//        return "ERROR:не верный второй аргумент, допустимые значения: +,-,*,/ ";
+//    };
+//    с этим куском не работает, почему не пойму!
+    
+    $rez = $nums[0];
+    
+    for ($i=1; $i<count ($nums);$i++){
+        
+        switch($math){
+            case '+': $rez =$rez+$nums[$i]; break;
+            case '-': $rez =$rez-$nums[$i]; break;
+            case '*': $rez =$rez*$nums[$i]; break;
+            case '/': $rez =$rez/$nums[$i]; break;
+        }
+    }
+    return $rez;
+};
 
 //function task2($arr, $strsymbol)
 //{
