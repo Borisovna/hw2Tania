@@ -16,7 +16,7 @@ function task1($var1, $var2 = null)
 function task2($nums,$math){
     
     for($i=0; $i<count ($nums);$i++){
-        if(!is_integer ($nums[$i])){
+        if(!is_numeric ($nums[$i])){
             return 'ERROR:массив чисел должен содержать только числовые значения!';
         }
     };
@@ -82,12 +82,18 @@ function task2($nums,$math){
 
 function task3($str, ...$intervals)
 {
-    $rez = 0;
-    for ($i = 0; $i < count($intervals); $i++) {
-
-        $rez = $intervals[$i] + $rez;
-
+    $rez = $intervals[0];
+    for ($i=1; $i<count ($intervals);$i++){
+        
+        switch($str){
+            case '+': $rez =$rez+$intervals[$i]; break;
+            case '-': $rez =$rez-$intervals[$i]; break;
+            case '*': $rez =$rez*$intervals[$i]; break;
+            case '/': $rez =$rez/$intervals[$i]; break;
+            default: return"ERROR:Некорректный ввод арифметического знака<br/>";
+        }
     }
+    
     $str2 = implode($str, $intervals);
 
     return $str2 . '=' . $rez;

@@ -7,9 +7,9 @@ $rez=task1($a,$a);
 echo $rez.'</br>';
 
 echo '</br>'.'TASK2'.'</br>';
-$number=array(5,2);
-$r='*';
-echo "Результат TASK2:".task2($number,$r);
+$number=array(8,2);
+$r='/';
+echo "Результат TASK2: ".task2($number,$r);
 echo '</br>';
 
 echo '</br>'.'TASK3'.'</br>';
@@ -19,7 +19,7 @@ echo '</br>'.'TASK4'.'</br>';
 echo  task4(5,7).'</br>';
 
 echo 'TASK5'.'</br>';
-$b=task5('asa');
+$b=task5('5s5');
 echo output($b).'</br>'.'</br>';
 
 echo 'TASK6'.'</br>';
