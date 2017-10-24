@@ -7,8 +7,8 @@ $rez=task1($a,$a);
 echo $rez.'</br>';
 
 echo '</br>'.'TASK2'.'</br>';
-$number=array(8,2);
-$r='/';
+$number=array(1,1,1,1,1);
+$r='+';
 echo "Результат TASK2: ".task2($number,$r);
 echo '</br>';
 

@@ -17,7 +17,7 @@ function task2($nums,$math){
     
     for($i=0; $i<count ($nums);$i++){
         if(!is_numeric ($nums[$i])){
-            return 'ERROR:массив чисел должен содержать только числовые значения!';
+            return '</br>ERROR:массив чисел должен содержать только числовые значения!';
         }
     };
     
@@ -29,7 +29,11 @@ function task2($nums,$math){
             case '+': $rez =$rez+$nums[$i]; break;
             case '-': $rez =$rez-$nums[$i]; break;
             case '*': $rez =$rez*$nums[$i]; break;
-            case '/': $rez =$rez/$nums[$i]; break;
+            case '/':if ($nums[$i]==0){
+                return '</br>ERROR:на ноль делить нельзя!';
+            }else{
+                $rez =$rez/$nums[$i];
+            }  break;
             default: return"ERROR:Некорректный ввод арифметического знака<br/>";
         }
     }
