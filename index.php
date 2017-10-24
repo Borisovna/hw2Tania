@@ -39,22 +39,17 @@ for ( $i=0; $i<count ($arr2);$i++){
 $srt3=implode (' ',$arr2);
 echo $srt3;
 
-
-//echo '</br>'.'</br>'.'TASK8'.'</br>';
-//$str4="RX packets:950381 errors:0 dropped:0 overruns:0 frame:0.";
-//echo '<pre>';
-//echo print_r (task8($str4));
-
-
 echo '</br>'.'</br>'.'TASK9'.'</br>';
-
 $file="test.txt";
-fopen ($file,"w");
-$current = "Hello, world";
-file_put_contents($file, $current);
-echo file_get_contents($file);
+echo task9($file);
+
+//fopen ($file,"w");
+//$current = "Hello, world";
+//file_put_contents($file, $current);
+//echo file_get_contents($file);
 
 echo '</br>'.'</br>'.'TASK10'.'</br>';
 $file="anothertest.txt";
 fopen ($file,"w");
 $current = "Hello again!";
+file_put_contents($file, $current);

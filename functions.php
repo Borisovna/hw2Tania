@@ -167,3 +167,10 @@ function output($a)
 //    $arr=preg_grep ($pattern,explode (":",$str);
 //    return $arr;
 //}
+
+function task9($file){
+    $hand = fopen($file, "r");
+    $contents = fread($hand, filesize($file));
+    fclose($hand);
+    return $contents;
+}
