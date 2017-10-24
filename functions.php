@@ -93,7 +93,11 @@ function task3($str, ...$intervals)
             case '+': $rez =$rez+$intervals[$i]; break;
             case '-': $rez =$rez-$intervals[$i]; break;
             case '*': $rez =$rez*$intervals[$i]; break;
-            case '/': $rez =$rez/$intervals[$i]; break;
+            case '/':if ($intervals[$i]==0){
+                return '</br>ERROR:на ноль делить нельзя!';
+            }else{
+                $rez =$rez/$intervals[$i];
+            }   break;
             default: return"ERROR:Некорректный ввод арифметического знака<br/>";
         }
     }

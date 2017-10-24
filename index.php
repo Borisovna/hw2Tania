@@ -13,7 +13,7 @@ echo "Результат TASK2: ".task2($number,$r);
 echo '</br>';
 
 echo '</br>'.'TASK3'.'</br>';
-echo  task3('+',10,8,3).'</br>';
+echo  task3('/',10,0,3).'</br>';
 
 echo '</br>'.'TASK4'.'</br>';
 echo  task4(5,7).'</br>';
