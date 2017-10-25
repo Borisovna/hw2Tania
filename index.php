@@ -7,13 +7,14 @@ $rez=task1($a,$a);
 echo $rez.'</br>';
 
 echo '</br>'.'TASK2'.'</br>';
-$number=array(1,1,1,1,1);
-$r='+';
-echo "Результат TASK2: ".task2($number,$r);
+$number=array(5,1,10,1);
+$q='h';
+$znak='/';
+echo task2($number,$znak);
 echo '</br>';
 
 echo '</br>'.'TASK3'.'</br>';
-echo  task3('/',10,0,3).'</br>';
+echo  task3('+',10,0,3,6,8,1).'</br>';
 
 echo '</br>'.'TASK4'.'</br>';
 echo  task4(5,7).'</br>';

@@ -14,7 +14,9 @@ function task1($var1, $var2 = null)
 
 ;
 function task2($nums,$math){
-    
+    if (!is_array ($nums)){
+        return '</br>ERROR:первый аргумент не является массивом!';
+    }
     for($i=0; $i<count ($nums);$i++){
         if(!is_numeric ($nums[$i])){
             return '</br>ERROR:массив чисел должен содержать только числовые значения!';
@@ -40,56 +42,13 @@ function task2($nums,$math){
     return $rez;
 };
 
-//function task2($arr, $strsymbol)
-//{
-//    $error = array('ошибка - в символе', 'ошибка - не число');
-//if($strsymbol !== "-" || $strsymbol !== "+" || $strsymbol !== "*" || $strsymbol !== "/"){
-//    return $error[0];
-//    }
-//
-//
-////    if ($strsymbol == "-" || $strsymbol == "+" || $strsymbol == "*" || $strsymbol == "/") {
-////     if(is_int($arr[0]) or is_float($arr[0])){
-////         $rez=$arr[0];
-////     } else{
-////         echo $error[1] . '</br>';
-////     }
-////        for ($i = 0; $i < count($arr); $i++) {
-////            if (is_int($arr[$i]) or is_float($arr[$i])) {
-////                switch ($strsymbol) {
-////                    case "-":
-////                        $rez = $rez - $arr[$i];
-////                        break;
-////                    case "+":
-////                        $rez = $rez + $arr[$i];
-////                        break;
-////                    case "*":
-////                        $rez = $rez * $arr[$i];
-////                        break;
-////                    case "/":
-////                        $rez = $rez / $arr[$i];
-////                        break;
-////                }
-////
-////            } else {
-////                echo $error[1] . '</br>';
-////            }
-////        }
-////
-////    } else {
-////        echo $error[0];
-////    }
-//    return $rez;
-//}
-
-;
-
-function task3($str, ...$intervals)
+function task3()
 {
-    $rez = $intervals[0];
-    for ($i=1; $i<count ($intervals);$i++){
-        
-        switch($str){
+    $intervals=func_get_args(); //Возвращает массив, содержащий аргументы функции
+    $operation = $intervals[0];
+    $rez = $intervals[1];
+    for ($i=2; $i<count ($intervals);$i++){
+        switch($operation){
             case '+': $rez =$rez+$intervals[$i]; break;
             case '-': $rez =$rez-$intervals[$i]; break;
             case '*': $rez =$rez*$intervals[$i]; break;
@@ -101,10 +60,9 @@ function task3($str, ...$intervals)
             default: return"ERROR:Некорректный ввод арифметического знака<br/>";
         }
     }
-    
-    $str2 = implode($str, $intervals);
-
-    return $str2 . '=' . $rez;
+    $arr=array_splice($intervals, 1);//Удаляет часть массива и заменяет её чем-нибудь ещё
+    $str = implode($operation, $arr);// Объединяет элементы массива в строку с разделителем
+    return $str.'='.$rez;
 
 }
 
