@@ -11,6 +11,7 @@ function task1 ($var1, $var2 = null)
     }
     
 }
+
 ;
 function task2 ($nums, $math)
 {
@@ -137,6 +138,19 @@ function task5 ($str)
     }
 }
 
+function task7 ($srt)
+{
+    $arr = explode (' ', $srt);
+    for ($i = 0; $i < count ($arr); $i++) {
+        if ($arr[$i] == 'Две') {
+            $arr[$i] = 'Три';
+        }
+    }
+    $srt3 = implode (' ', $arr);
+    
+    return $srt3;
+}
+
 ;
 function output ($a)
 {
@@ -152,5 +166,6 @@ function task9 ($file)
     $hand = fopen ($file, "r");
     $contents = fread ($hand, filesize ($file));
     fclose ($hand);
+    
     return $contents;
 }
